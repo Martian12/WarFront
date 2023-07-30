@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submitted War Stories</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+  <header>
+    <h1>WarFront</h1>
+    <nav>
+      <ul>
+        <li><a href="War.html">Home</a></li>
+        <li><a href="present_war.html">Present Wars</a></li>
+        <li><a href="historical_war.html">Historical Wars</a></li>
+        <li><a href="weapons.html">Weapons of War</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href ="submit_war_story.html">Submit War Stories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <main>
+        <h2>Submitted War Story</h2>
+        <div class="war-story">
+            <h3>Name:</h3>
+            <p id="name"></p>
+            <h3>Email:</h3>
+            <p id="email"></p>
+            <h3>War Story:</h3>
+            <p id="story"></p>
+        </div>
+
+        <h2>Your story has been submitted. Thank you.</h2>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Warfronts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        
+        function getQueryParams() {
+            const queryString = window.location.search;
+            const urlParams = new URLSearchParams(queryString);
+            const queryParams = {};
+            for (const [key, value] of urlParams) {
+                queryParams[key] = value;
+            }
+            return queryParams;
+        }
+
+        
+        const queryParams = getQueryParams();
+
+        
+        document.getElementById('name').textContent = queryParams.name || 'Name not provided';
+        document.getElementById('email').textContent = queryParams.email || 'Email not provided';
+        document.getElementById('story').textContent = queryParams.story || 'War story not provided';
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Present Wars</title>
+  <link rel="stylesheet" href="War.css">
+  <script>
+   
+    const header = document.querySelector('header');
+    const footer = document.querySelector('footer');
+
+    header.style.backgroundColor = '#333';
+    header.style.color = 'white';
+    header.style.padding = '10px';
+    header.style.textAlign = 'left';
+
+    footer.style.backgroundColor = '#333';
+    footer.style.color = 'white';
+    footer.style.padding = '10px';
+    footer.style.textAlign = 'left';
+
+    
+    const warCards = document.querySelectorAll('.war-card');
+
+    warCards.forEach(card => {
+      card.style.border = '1px solid #ccc';
+      card.style.padding = '10px';
+      card.style.borderRadius = '5px';
+      card.style.transition = 'transform 0.2s ease-in-out';
+
+      card.addEventListener('mouseover', () => {
+        card.style.transform = 'scale(1.05)';
+        card.style.boxShadow = '0px 2px 5px rgba(0, 0, 0, 0.3)';
+      });
+
+      card.addEventListener('mouseout', () => {
+        card.style.transform = 'scale(1)';
+        card.style.boxShadow = 'none';
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <h1>WarFronts: Traversing Historical and Modern Conflicts</h1>
+    <nav>
+      <ul>
+        <li><a href="War.html">Home</a></li>
+        <li><a href="present_war.html">Present Wars</a></li>
+        <li><a href="historical_war.html">Historical Wars</a></li>
+        <li><a href="weapons.html">Weapons of War</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href ="submit_war_story.html">Submit War Stories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="historical-wars">
+      <h2>Historical Wars</h2>
+      <div class="war-card">
+        <h3>Second_Sino_Japanese</h3>
+        <p>The Second Sino-Japanese War (1937–1945) was a military conflict that was 
+          primarily waged between the Republic of China and the Empire of Japan. 
+          The war made up the Chinese theater of the wider Pacific Theater of the 
+          Second World War</p>
+   
+        <a href="Second_Sino_Japanese.html" class="read-more-link">Click here to read more.</a>
+      </div>
+
+      <div class="war-card">
+        <h3>Vietnam War</h3>
+        <p>The Vietnam War was a prolonged conflict between North Vietnam, led by the communist 
+          government, and South Vietnam, supported by the United States and its allies. 
+          It involved the Viet Cong, a guerilla force allied with North Vietnam, against 
+          the South Vietnamese government. The war was also known as the "American War" 
+          in Vietnam and was part of the larger Indochina wars 
+          and the Cold War between the USA and the Soviet Union and their allies.</p>
+        <a href="VietnamWar.html" class="read-more-link">Read More</a>
+      </div>
+
+      
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Warfronts. All rights reserved.</p>
+  </footer>
+
+  
+</body>
+</html>

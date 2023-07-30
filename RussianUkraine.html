@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="present_war.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Russo-Ukrainian War</h1>
+        <nav>
+            <ul>
+                <li><a href="War.html">Home</a></li>
+                <li><a href="present_war.html">Present Wars</a></li>
+                <li><a href="historical_war.html">Historical Wars</a></li>
+                <li><a href="weapons.html">Weapons of War</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href ="submit_war_story.html">Submit War Stories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section id="report-content">
+            <h2>Report Title</h2>
+            <p>Date: February 24, 2022 </p>
+            <p>Source: Institute for the Study of War
+            </p>
+            <p>
+                Russian forces have intensified their efforts to advance on multiple fronts in Ukraine, focusing on key areas such as Kyiv, 
+                northeastern Ukraine, Donbas, and Crimea-Kherson. In the last 24 hours, their main axes of advance have been directed towards these regions. 
+                Notably, Russian airborne and special forces are engaged in urban warfare in northwestern Kyiv, attempting to isolate the capital.
+                 However, Russian mechanized forces have not yet entered Kyiv, indicating some resistance from Ukrainian defenses.
+                 <br>
+                 <br>
+                In the northeast, Russian forces have advanced on a broad front between Chernihiv and Kharkiv. 
+                Ukrainian forces have managed to delay and inflict losses on the Russian advance in this region, 
+                but additional reserves from Russia may pose a greater challenge to halt further progress.
+                <br>
+                <br>
+                Russian forces in Crimea have shifted their primary focus from a presumed drive towards 
+                Odesa to pushing north towards Zaporizhie and the southeastern bend of the Dnipro River. 
+                Moreover, they are advancing east along the Azov Sea coast toward Mariupol. 
+                These advances risk cutting off large concentrations of Ukrainian forces defending the former line of contact 
+                between unoccupied Ukraine and occupied Donbas.
+                <br>
+                <br>
+                Ukrainian resistance has proven remarkably effective, causing significant setbacks for Russian forces in Kyiv and Kharkiv. 
+                However, it is important to note that Russian forces still hold a considerable advantage in terms of size and 
+                capability compared to Ukraine's conventional military. The situation remains fluid, and Ukrainian leaders may soon 
+                face difficult decisions regarding the withdrawal of forces and ceding more territory or risking encirclement and destruction of 
+                their uncommitted combat power.
+            </p>
+
+            <h3>Key Points</h3>
+            <p>
+               
+
+
+
+
+                <p>1. Russian forces are intensifying their efforts on multiple fronts in Ukraine.</p>
+                <p>2. The main axes of advance include Kyiv, northeastern Ukraine, Donbas, and Crimea-Kherson.</p>
+                <p>3. Ukrainian forces are putting up strong resistance, particularly in Kyiv and Kharkiv.</p>
+                <p>4. Russian advances in southern Ukraine threaten to unhinge the defense of Kyiv and northeastern Ukraine.</p>
+                <p>5. Ukrainian leaders may face a difficult decision on withdrawing forces to avoid encirclement.</p>
+                <p></p>6. Russian forces retain a significant advantage in size and capability compared to Ukraine's military.</p>
+                <p>7. The situation is fluid, and both sides may adjust their strategies and tactics.</p>
+
+The evolving conflict poses significant challenges for both Ukrainian and Russian forces, with potential implications for the regional and global security landscape. Further developments in the coming days may shape the course of the conflict and its impact on the involved parties and the international community.
+            </p>
+
+            <h3>Summary</h3>
+            <p>
+                The evolving conflict poses significant challenges for both Ukrainian and Russian forces, 
+                with potential implications for the regional and global security landscape. 
+                Further developments in the coming days may shape the course of the conflict and 
+                its impact on the involved parties and the international community.
+            </p>
+
+            
+        </section>
+    </main>
+
+            <div style="display: flex; justify-content: center;">
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AUaqB8_Soko" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <section id="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-container">
+                <div class="image-container">
+                    <img src="UkraineImage1.jpg" alt="Image 1" >
+                </div>
+                <div class="image-container">
+                    <img src="UkraineImage2.jpg" alt="Image 2" >
+                </div>
+                <div class="image-container">
+                    <img src="UkraineImage.jpg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="UkraineImage4.jpg" alt="Image 4">
+                </div>
+                <div class="image-container">
+                    <img src="Ukraineimage5.jpg" alt="Image 5">
+                </div>
+                
+            </div>
+            <div class="gallery-controls">
+                <button id="prev-btn">&lt;</button>
+                <button id="next-btn">&gt;</button>
+            </div>
+        </section>
+        
+        
+        <script>
+            const galleryContainer = document.querySelector('.gallery-container');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+        
+            const images = galleryContainer.querySelectorAll('.image-container');
+            let currentImage = 0;
+        
+            
+            function showImage() {
+                images.forEach((image, index) => {
+                    if (index === currentImage) {
+                        image.style.display = 'block';
+                    } else {
+                        image.style.display = 'none';
+                    }
+                });
+            }
+        
+            
+            prevBtn.addEventListener('click', () => {
+                currentImage = (currentImage - 1 + images.length) % images.length;
+                showImage();
+            });
+        
+            
+            nextBtn.addEventListener('click', () => {
+                currentImage = (currentImage + 1) % images.length;
+                showImage();
+            });
+        
+            
+            showImage();
+        </script>
+    <footer>
+         <p>&copy; 2023 Warfronts. All rights reserved.</p>
+        </footer>
+        
+</body>
+</html>

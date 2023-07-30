@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="present_war.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Vietnam War</h1>
+        <nav>
+            <ul>
+                <li><a href="War.html">Home</a></li>
+                <li><a href="present_war.html">Present Wars</a></li>
+                <li><a href="historical_war.html">Historical Wars</a></li>
+                <li><a href="weapons.html">Weapons of War</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href ="submit_war_story.html">Submit War Stories</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        <section id="report-content">
+            <h2>Vietnam War</h2>
+            <p>Date: 1954 - 1975 </p>
+            <p>Source: The Guardian
+            </p>
+            <p>
+                During the late fifties, Vietnam was divided into a communist North and 
+                anti-communist South. Because of the Cold War anxiety of the time, the general 
+                feeling was that, should the North Vietnamese communists win, the remainder of 
+                Southeast Asia would also fall to communism. When President John F. Kennedy took 
+                office in 1961, he swore that he would not let that happen.
+                 <br>
+                 <br>
+                 In August 1964, the US government received word that two North Vietnamese 
+                 torpedo boats attacked US destroyers in the Gulf of Tonkin. 
+                 President Lyndon Johnson requested authorization from Congress for the use 
+                 of military force, resulting in the Gulf of Tonkin resolution, which laid 
+                 the groundwork for the full-scale US military commitment to Vietnam. 
+                 The resolution declared the support of Congress for “all necessary measures 
+                 to repel any armed attack against the armed forces of the United States and 
+                 to prevent further aggression.”
+
+
+                <br>
+                <br>
+                The 1968 Tet Offensive, a bold North Vietnamese attack on the south, 
+                convinced many US officials that the war could not be won at a reasonable cost. 
+                Heightened opposition to the war was one of the major factors in Johnson's 
+                decision not to run for re-election in 1968.
+                <br>
+                <br>
+                The war in Vietnam had lasting consequences for US foreign policy. 
+                Congress passed the War Powers Act in 1973, in a clear attempt to 
+                reassert a measure of control over the making of foreign policy and to 
+                impose constraints on presidential power. For well over a decade, 
+                American public opinion was hostile to the idea of foreign interventions. 
+                This was known as the “Vietnam syndrome,” and it entailed an unwillingness 
+                to become bogged down in foreign wars in which American national security 
+                interests were unclear.
+            </p>
+
+            <h3>Key Points</h3>
+            <p>
+               
+
+
+
+
+           <p>1. The Vietnam War was a prolonged military conflict that started as 
+               an anticolonial war against the French and evolved into a Cold War 
+               confrontation between international communism and free-market democracy.</p>
+
+           <p>2. The Democratic Republic of Vietnam (DRV) in the north was supported by the Soviet Union, China, 
+               and other communist countries, while the United States and its anticommunist allies backed 
+               the Republic of Vietnam (ROV) in the south.</p>
+
+           <p>3. President Lyndon Johnson dramatically escalated US involvement in the conflict, authorizing a series of intense bombing campaigns and committing hundreds of thousands of US ground troops to the fight.
+        </p>
+
+           <p>4. After the United States withdrew from the conflict, North Vietnam 
+               invaded the South and united the country under a communist government.</p>
+
+
+            <h3>Summary</h3>
+            <p>
+                Vietnam War, a protracted conflict that pitted the communist 
+                government of North Vietnam and its allies in South Vietnam, known as the Viet 
+                Cong, against the government of South Vietnam and its principal ally, the United 
+                States. Called the “American War” in Vietnam (or, in full, the “War Against the 
+                Americans to Save the Nation”), the war was also part of a larger regional 
+                conflict (see Indochina wars) and a manifestation of the Cold War between the 
+                United States and the Soviet Union and their respective allies.
+            </p>
+
+            
+        </section>
+    </main>
+
+            <div style="display: flex; justify-content: center;">
+           
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/7tNTh6KlXXU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <section id="photo-gallery">
+            <h2>Photo Gallery</h2>
+            <div class="gallery-container">
+                <div class="image-container">
+                    <img src="vietnamphoto1.jpg" alt="Image 1" >
+                </div>
+                <div class="image-container">
+                    <img src="VietnamWar1.jpg" alt="Image 2" >
+                </div>
+                <div class="image-container">
+                    <img src="VietnamWar2.jpeg" alt="Image 3">
+                </div>
+                <div class="image-container">
+                    <img src="Vietnamwar5.jpg" alt="Image 4">
+                </div>
+                
+            </div>
+            <div class="gallery-controls">
+                <button id="prev-btn">&lt;</button>
+                <button id="next-btn">&gt;</button>
+            </div>
+        </section>
+        
+        
+        <script>
+            const galleryContainer = document.querySelector('.gallery-container');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+        
+            const images = galleryContainer.querySelectorAll('.image-container');
+            let currentImage = 0;
+        
+            
+            function showImage() {
+                images.forEach((image, index) => {
+                    if (index === currentImage) {
+                        image.style.display = 'block';
+                    } else {
+                        image.style.display = 'none';
+                    }
+                });
+            }
+        
+            
+            prevBtn.addEventListener('click', () => {
+                currentImage = (currentImage - 1 + images.length) % images.length;
+                showImage();
+            });
+        
+            
+            nextBtn.addEventListener('click', () => {
+                currentImage = (currentImage + 1) % images.length;
+                showImage();
+            });
+        
+            
+            showImage();
+        </script>
+
+        <br>
+        <br>
+
+    <footer>
+         <p>&copy; 2023 Warfronts. All rights reserved.</p>
+        </footer>
+        
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <header>
+    <h1>War Stories Submission</h1>
+    <nav>
+      <ul>
+        <li><a href="War.html">Home</a></li>
+        <li><a href="present_war.html">Present Wars</a></li>
+        <li><a href="historical_war.html">Historical Wars</a></li>
+        <li><a href="weapons.html">Weapons of War</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href ="submit_war_story.html">Submit War Stories</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <title>Submit War Stories</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+    <header>
+        
+    </header>
+
+    <main>
+        <h2>Submit Your War Story</h2>
+        <form id="war-story-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="story">War Story:</label>
+            <textarea id="story" name="story" required></textarea><br>
+
+            
+
+            <input type="submit" value="Submit">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Warfronts. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('war-story-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const story = document.getElementById('story').value;
+
+            
+            const dataString = `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&story=${encodeURIComponent(story)}`;
+
+            
+            window.location.href = `submitted_stories.html?${dataString}`;
+        });
+    </script>
+</body>
+</html>
